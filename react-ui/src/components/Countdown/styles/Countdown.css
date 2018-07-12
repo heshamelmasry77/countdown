@@ -1,0 +1,28 @@
+.Countdown {
+  font-size: 35px;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  flex-wrap: nowrap; }
+  .Countdown .values-container {
+    display: flex;
+    width: 400px;
+    flex: 1;
+    align-self: center; }
+    .Countdown .values-container .clock-days, .Countdown .values-container .clock-hours, .Countdown .values-container .clock-minutes, .Countdown .values-container .clock-seconds {
+      border: 1px solid black;
+      margin: 0 5px;
+      min-width: 90px;
+      max-width: 90px;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      .Countdown .values-container .clock-days span.date-values, .Countdown .values-container .clock-hours span.date-values, .Countdown .values-container .clock-minutes span.date-values, .Countdown .values-container .clock-seconds span.date-values {
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: bold; }
+      .Countdown .values-container .clock-days span.date-names, .Countdown .values-container .clock-hours span.date-names, .Countdown .values-container .clock-minutes span.date-names, .Countdown .values-container .clock-seconds span.date-names {
+        text-transform: uppercase;
+        font-size: 14px; }
