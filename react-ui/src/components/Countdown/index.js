@@ -17,8 +17,8 @@ class Countdown extends Component {
 		// this.setState({
 		// 	deadline: "November 25, 2018"
 		// });
-		console.log('state: ', this.state);
-		this.setState({deadline:this.state.newDeadline});
+		console.log("state: ", this.state);
+		this.setState({deadline: this.state.newDeadline});
 	}
 	
 	render() {
@@ -39,7 +39,8 @@ class Countdown extends Component {
 						className="date-names">seconds</span></div>
 				</div>
 				<div>
-					<input placeholder='new date' onChange={(event)=> this.setState({newDeadline:event.target.value})}/>
+					<input placeholder='new date'
+					       onChange={(event) => this.setState({newDeadline: event.target.value})}/>
 					<button onClick={() => this.changeDeadline()}>
 						Submit
 					</button>
