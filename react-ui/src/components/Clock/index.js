@@ -26,32 +26,34 @@ class Clock extends Component {
 	}
 	
 	leadingZero(num) {
-		if (num < 10) {
-			return "0" + num;
-		}
-		return num;
+		// if (num < 10) {
+		// 	return "0" + num;
+		// }
+		// return num;
+		return num < 10 ? "0" + num : num;
 	}
+	
 	getTimeUntil(deadline) {
 		const time = Date.parse(deadline) - Date.parse(new Date());
-		console.log("time: ", time);
+		// console.log("time: ", time);
 		
 		const seconds = Math.floor((time / 1000) % 60);
-		console.log("seconds: ", seconds);
+		// console.log("seconds: ", seconds);
 		
-		const minutes = Math.floor((time / 1000/60) % 60);
-		console.log("minutes: ", minutes);
+		const minutes = Math.floor((time / 1000 / 60) % 60);
+		// console.log("minutes: ", minutes);
 		
-		const hours = Math.floor((time / (1000*60*60)) % 24);
-		console.log("hours: ", hours);
+		const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+		// console.log("hours: ", hours);
 		
-		const days = Math.floor(time/(1000*60*60*24));
-		console.log("days: ", days);
+		const days = Math.floor(time / (1000 * 60 * 60 * 24));
+		// console.log("days: ", days);
 		
 		this.setState({
-			days:days,
-			hours:hours,
-			minutes:minutes,
-			seconds:seconds
+			days: days,
+			hours: hours,
+			minutes: minutes,
+			seconds: seconds
 		});
 	}
 	
@@ -61,11 +63,14 @@ class Clock extends Component {
 				<div className="values-container">
 					<div className="clock-days"><span className="date-values">{this.leadingZero(this.state.days)}</span><span
 						className="date-names">days</span></div>
-					<div className="clock-hours"><span className="date-values">{this.leadingZero(this.state.hours)}</span> <span
+					<div className="clock-hours"><span
+						className="date-values">{this.leadingZero(this.state.hours)}</span> <span
 						className="date-names">hours</span></div>
-					<div className="clock-minutes"><span className="date-values">{this.leadingZero(this.state.minutes)}</span> <span
+					<div className="clock-minutes"><span
+						className="date-values">{this.leadingZero(this.state.minutes)}</span> <span
 						className="date-names">minutes</span></div>
-					<div className="clock-seconds"><span className="date-values">{this.leadingZero(this.state.seconds)}</span> <span
+					<div className="clock-seconds"><span
+						className="date-values">{this.leadingZero(this.state.seconds)}</span> <span
 						className="date-names">seconds</span></div>
 				</div>
 			</div>
