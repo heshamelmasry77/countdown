@@ -29,7 +29,9 @@ class Countdown extends Component {
 				<h2>
 					Black Friday {this.state.deadline}
 				</h2>
-				<Clock/>
+				<Clock
+					deadline={this.state.deadline}
+				/>
 				<div>
 					<input placeholder='new date'
 					       onChange={(event) => this.setState({newDeadline: event.target.value})}/>
