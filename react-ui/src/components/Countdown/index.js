@@ -2,6 +2,7 @@ import React from "react";
 import {Component} from "react";
 // eslint-disable-next-line
 import "./styles/Countdown.css";
+import Clock from "../Clock";
 
 class Countdown extends Component {
 	constructor(props) {
@@ -28,16 +29,7 @@ class Countdown extends Component {
 				<h2>
 					Black Friday {this.state.deadline}
 				</h2>
-				<div className="values-container">
-					<div className="clock-days"><span className="date-values">27</span><span
-						className="date-names">days</span></div>
-					<div className="clock-hours"><span className="date-values">37</span> <span
-						className="date-names">hours</span></div>
-					<div className="clock-minutes"><span className="date-values">2</span> <span
-						className="date-names">minutes</span></div>
-					<div className="clock-seconds"><span className="date-values">22</span> <span
-						className="date-names">seconds</span></div>
-				</div>
+				<Clock/>
 				<div>
 					<input placeholder='new date'
 					       onChange={(event) => this.setState({newDeadline: event.target.value})}/>

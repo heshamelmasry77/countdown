@@ -5,31 +5,4 @@
   flex-direction: column;
   margin: auto;
   flex-wrap: nowrap;
-  .values-container {
-    display: flex;
-    width: 400px;
-    flex: 1;
-    align-self: center;
-    .clock-days, .clock-hours, .clock-minutes, .clock-seconds {
-      border: 1px solid black;
-      margin: 0 5px;
-      min-width: 90px;
-      max-width: 90px;
-      min-height: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      span {
-        &.date-values {
-          text-transform: uppercase;
-          font-size: 36px;
-          font-weight: bold;
-        }
-        &.date-names {
-          text-transform: uppercase;
-          font-size: 14px;
-        }
-      }
-    }
-  }
 }
