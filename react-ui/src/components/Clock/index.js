@@ -14,6 +14,7 @@ class Clock extends Component {
 		};
 		console.log("this.props: ", this.props);
 		this.getTimeUntil = this.getTimeUntil.bind(this);
+		this.leadingZero = this.leadingZero.bind(this);
 	}
 	
 	componentWillMount() {//life cycle hook
@@ -22,6 +23,13 @@ class Clock extends Component {
 	
 	componentDidMount() {//after the component is completely rendered to the application
 		setInterval(() => this.getTimeUntil(this.props.deadline), 1000);
+	}
+	
+	leadingZero(num) {
+		if (num < 10) {
+			return "0" + num;
+		}
+		return num;
 	}
 	getTimeUntil(deadline) {
 		const time = Date.parse(deadline) - Date.parse(new Date());
@@ -51,13 +59,13 @@ class Clock extends Component {
 		return (
 			<div className="Clock">
 				<div className="values-container">
-					<div className="clock-days"><span className="date-values">{this.state.days}</span><span
+					<div className="clock-days"><span className="date-values">{this.leadingZero(this.state.days)}</span><span
 						className="date-names">days</span></div>
-					<div className="clock-hours"><span className="date-values">{this.state.hours}</span> <span
+					<div className="clock-hours"><span className="date-values">{this.leadingZero(this.state.hours)}</span> <span
 						className="date-names">hours</span></div>
-					<div className="clock-minutes"><span className="date-values">{this.state.minutes}</span> <span
+					<div className="clock-minutes"><span className="date-values">{this.leadingZero(this.state.minutes)}</span> <span
 						className="date-names">minutes</span></div>
-					<div className="clock-seconds"><span className="date-values">{this.state.seconds}</span> <span
+					<div className="clock-seconds"><span className="date-values">{this.leadingZero(this.state.seconds)}</span> <span
 						className="date-names">seconds</span></div>
 				</div>
 			</div>
