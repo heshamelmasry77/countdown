@@ -12,9 +12,40 @@ class Clock extends Component {
 			minutes: 0,
 			seconds: 0
 		};
-		console.log('this.props: ',this.props);
+		console.log("this.props: ", this.props);
+		this.getTimeUntil = this.getTimeUntil.bind(this);
 	}
 	
+	componentWillMount() {//life cycle hook
+		this.getTimeUntil(this.props.deadline);
+	}
+	
+	componentDidMount() {//after the component is completely rendered to the application
+		setInterval(() => this.getTimeUntil(this.props.deadline), 1000);
+	}
+	getTimeUntil(deadline) {
+		const time = Date.parse(deadline) - Date.parse(new Date());
+		console.log("time: ", time);
+		
+		const seconds = Math.floor((time / 1000) % 60);
+		console.log("seconds: ", seconds);
+		
+		const minutes = Math.floor((time / 1000/60) % 60);
+		console.log("minutes: ", minutes);
+		
+		const hours = Math.floor((time / (1000*60*60)) % 24);
+		console.log("hours: ", hours);
+		
+		const days = Math.floor(time/(1000*60*60*24));
+		console.log("days: ", days);
+		
+		this.setState({
+			days:days,
+			hours:hours,
+			minutes:minutes,
+			seconds:seconds
+		});
+	}
 	
 	render() {
 		return (
