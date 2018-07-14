@@ -1,24 +1,28 @@
 import React from "react";
+import { Component } from "react";
 // eslint-disable-next-line
 import "./styles/Countdown.css";
 import Clock from "../Clock";
+import Headings from "../Headings";
 
-const Countdown = () => {
-  const deadline = "November 23, 2018";
-  return (
-    <div className="Countdown">
-      <h1>Countdown to Black Friday</h1>
-      <h2>
-        Black Friday {deadline}
-      </h2>
-      <Clock
-        deadline={deadline}
-      />
-      <div>
+class Countdown extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      deadline: "November 23, 2018"
+    };
+  }
+
+  render() {
+    return (
+      <div className="Countdown">
+        <Headings deadline={this.state.deadline}/>
+        <Clock
+          deadline={this.state.deadline}
+        />
       </div>
-    </div>
-  );
-};
-
+    );
+  }
+}
 
 export default Countdown;
