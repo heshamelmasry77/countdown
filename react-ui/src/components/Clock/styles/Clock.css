@@ -5,6 +5,10 @@
   flex-direction: column;
   margin: auto;
   flex-wrap: nowrap; }
+  .Clock h5 {
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left; }
   .Clock .values-container {
     display: flex;
     width: 400px;

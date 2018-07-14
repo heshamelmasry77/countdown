@@ -60,6 +60,7 @@ class Clock extends Component {
 	render() {
 		return (
 			<div className="Clock">
+				<h5>starts in</h5>
 				<div className="values-container">
 					<div className="clock-days"><span className="date-values">{this.leadingZero(this.state.days)}</span><span
 						className="date-names">days</span></div>

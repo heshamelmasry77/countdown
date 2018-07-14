@@ -5,6 +5,11 @@
   flex-direction: column;
   margin: auto;
   flex-wrap: nowrap;
+  h5 {
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left;
+  }
   .values-container {
     display: flex;
     width: 400px;
