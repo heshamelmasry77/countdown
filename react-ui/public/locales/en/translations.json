@@ -1,0 +1,14 @@
+{
+  "h5": "change between languages",
+  "headings": {
+    "h2": "Countdown to Black Friday",
+    "h3": "Black Friday"
+  },
+  "clock": {
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds",
+    "h5": "start in"
+  }
+}

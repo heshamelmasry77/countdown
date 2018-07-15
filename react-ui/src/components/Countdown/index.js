@@ -25,4 +25,4 @@ class Countdown extends Component {
   }
 }
 
-export default Countdown;
+export default Countdown;   // instead of "export default App;"
