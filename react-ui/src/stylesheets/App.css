@@ -35,22 +35,13 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40px;
-  vertical-align: -webkit-baseline-middle;
-  position: relative;
-  bottom: 10px; }
-
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+  .App .App-Header button {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: #fff;
+    padding: 10px 25px;
+    margin: 5px;
+    text-transform: uppercase; }

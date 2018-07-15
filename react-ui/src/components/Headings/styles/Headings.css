@@ -1,7 +1,7 @@
-.Headings h1 {
+.Headings h2 {
   border: 1px solid black;
   padding: 10px; }
 
-.Headings h2 {
+.Headings h3 {
   border-bottom: 1px solid;
   padding-bottom: 10px; }
