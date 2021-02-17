@@ -6,7 +6,7 @@
     "@types/react": "^16.0.25",
     "flow-bin": "^0.57.3",
     "history": "^4.7.2",
-    "i18next": "9.0.1",
+    "i18next": "19.8.5",
     "i18next-browser-languagedetector": "2.0.0",
     "i18next-xhr-backend": "1.4.3",
     "install": "^0.10.1",
