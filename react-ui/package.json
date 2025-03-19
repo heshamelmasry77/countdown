@@ -10,7 +10,7 @@
     "i18next-browser-languagedetector": "2.0.0",
     "i18next-xhr-backend": "1.4.3",
     "install": "^0.10.1",
-    "lint-staged": "^4.3.0",
+    "lint-staged": "^10.2.0",
     "node-sass-chokidar": "1.5.0",
     "npm": "^7.0.0",
     "npm-run-all": "^4.1.2",
